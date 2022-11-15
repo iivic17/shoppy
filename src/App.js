@@ -40,6 +40,30 @@ const App = () => {
 							Navbar
 						</div>
 					</div>
+
+					<div>
+						<Routes>
+							<Route path='/' element='ECommerce' />
+							<Route path='/ecommerce' element='ECommerce' />
+
+							<Route path='/orders' element='Orders' />
+							<Route path='/employees' element='Employees' />
+							<Route path='/customers' element='Customers' />
+
+							<Route path='/kanban' element='Kanban' />
+							<Route path='/editor' element='Editor' />
+							<Route path='/calendar' element='Calendar' />
+							<Route path='/color-picker' element='ColorPicker' />
+
+							<Route path='/line' element='Line' />
+							<Route path='/area' element='Area' />
+							<Route path='/bar' element='Bar' />
+							<Route path='/pie' element='Pie' />
+							<Route path='/color-mapping' element='ColorMapping' />
+							<Route path='/pyramid' element='Pyramid' />
+							<Route path='/stacked' element='Stacked' />
+						</Routes>
+					</div>
 				</div>
 			</BrowserRouter>
 		</div>
