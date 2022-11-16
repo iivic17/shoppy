@@ -61,34 +61,34 @@ const App = () => {
 						<div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
 							<Navbar />
 						</div>
-					</div>
 
-					<div>
-						<Routes>
-							<Route path='/' element={<Ecommerce />} />
-							<Route path='/ecommerce' element={<Ecommerce />} />
+						<div>
+							<Routes>
+								<Route path='/' element={<Ecommerce />} />
+								<Route path='/ecommerce' element={<Ecommerce />} />
 
-							<Route path='/orders' element={<Orders />} />
-							<Route path='/employees' element={<Employees />} />
-							<Route path='/customers' element={<Customers />} />
+								<Route path='/orders' element={<Orders />} />
+								<Route path='/employees' element={<Employees />} />
+								<Route path='/customers' element={<Customers />} />
 
-							<Route path='/kanban' element={<Kanban />} />
-							<Route path='/editor' element={<Editor />} />
-							<Route path='/calendar' element={<Calendar />} />
-							<Route path='/color-picker' element={<ColorPicker />} />
+								<Route path='/kanban' element={<Kanban />} />
+								<Route path='/editor' element={<Editor />} />
+								<Route path='/calendar' element={<Calendar />} />
+								<Route path='/color-picker' element={<ColorPicker />} />
 
-							<Route path='/line' element={<LineChart />} />
-							<Route path='/area' element={<AreaChart />} />
-							<Route path='/bar' element={<BarChart />} />
-							<Route path='/pie' element={<PieChart />} />
-							<Route path='/financial' element={<FinancialChart />} />
-							<Route
-								path='/color-mapping'
-								element={<ColorMappingChart />}
-							/>
-							<Route path='/pyramid' element={<PyramidChart />} />
-							<Route path='/stacked' element={<StackedChart />} />
-						</Routes>
+								<Route path='/line' element={<LineChart />} />
+								<Route path='/area' element={<AreaChart />} />
+								<Route path='/bar' element={<BarChart />} />
+								<Route path='/pie' element={<PieChart />} />
+								<Route path='/financial' element={<FinancialChart />} />
+								<Route
+									path='/color-mapping'
+									element={<ColorMappingChart />}
+								/>
+								<Route path='/pyramid' element={<PyramidChart />} />
+								<Route path='/stacked' element={<StackedChart />} />
+							</Routes>
+						</div>
 					</div>
 				</div>
 			</BrowserRouter>
