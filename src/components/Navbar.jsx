@@ -15,9 +15,11 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 		<button
 			type='button'
 			onClick={customFunc}
-			className={`text-[${color}] relative text-xl rounded-full p-3 hover:bg-light-gray`}>
+			className='relative text-xl rounded-full p-3 hover:bg-light-gray'
+			style={{ color: color }}>
 			<span
-				className={`bg-[${dotColor}] absolute inline-flex rounded-full h-2 w-2 right-2 top-2`}>
+				className='absolute inline-flex rounded-full h-2 w-2 right-2 top-2'
+				style={{ backgroundColor: dotColor }}>
 				{icon}
 			</span>
 		</button>
@@ -35,6 +37,45 @@ const Navbar = () => {
 				color='blue'
 				icon={<AiOutlineMenu />}
 			/>
+			<div className='flex'>
+				<NavButton
+					title='Cart'
+					customFunc={() => setActiveMenu(prev => !prev)}
+					color='blue'
+					icon={<FiShoppingCart />}
+				/>
+				<NavButton
+					title='Cart'
+					dotColor='#03C9D7'
+					customFunc={() => setActiveMenu(prev => !prev)}
+					color='blue'
+					icon={<BsChatLeft />}
+				/>
+				<NavButton
+					title='Notifications'
+					dotColor='#03C9D7'
+					customFunc={() => setActiveMenu(prev => !prev)}
+					color='blue'
+					icon={<RiNotification3Line />}
+				/>
+				<TooltipComponent content='Profile' position='BottomCenter'>
+					<div
+						className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg'
+						onClick={() => {}}>
+						<img
+							src={avatar}
+							className='rounded-full w-8 h-8 object-contain'
+						/>
+						<p>
+							<span className='text-gray-400 text-14'>Hi,</span>{' '}
+							<span className='text-gray-400 font-bold ml-1 text-14'>
+								Michael
+							</span>
+						</p>
+						<MdKeyboardArrowDown className='text-gray-400 text-14' />
+					</div>
+				</TooltipComponent>
+			</div>
 		</div>
 	);
 };
