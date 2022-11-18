@@ -55,8 +55,10 @@ const Ecommerce = () => {
 				</div>
 			</div>
 
-			<div className='flex gap-10 flex-wrap justify-center'>
-				<div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl w-full'>
+			<div className='flex gap-10 justify-center flex-col xl:flex-row'>
+				<div
+					id='revenue'
+					className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl w-full'>
 					<div className='flex justify-between p-5 pt-6'>
 						<p className='font-semibold text-xl'>Revenue Updates</p>
 						<div className='flex items-center gap-4'>
@@ -119,7 +121,7 @@ const Ecommerce = () => {
 							</div>
 						</div>
 
-						<div className='border-r-1 border-color mb-10' />
+						<div className='border-r-1 border-color mb-10 hidden xl:block' />
 
 						<div>
 							<StackedChart width='400px' height='150px' />
@@ -127,9 +129,9 @@ const Ecommerce = () => {
 					</div>
 				</div>
 
-				<div>
+				<div id='earnings'>
 					<div
-						className='rounded-2xl md:w-400 p-4 m-3'
+						className='rounded-2xl w-600 xl:w-400 p-4 m-3'
 						style={{ backgroundColor: 'blue' }}>
 						<div className='flex justify-between items-center '>
 							<p className='font-semibold text-white text-2xl'>Earnings</p>
