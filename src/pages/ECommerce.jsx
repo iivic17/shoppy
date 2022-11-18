@@ -55,7 +55,7 @@ const Ecommerce = () => {
 				</div>
 			</div>
 
-			<div className='flex gap-10 justify-center flex-col xl:flex-row'>
+			<div className='flex justify-center flex-col xl:flex-row'>
 				<div
 					id='revenue'
 					className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl w-full'>
@@ -77,7 +77,7 @@ const Ecommerce = () => {
 						</div>
 					</div>
 
-					<div className='flex gap-10 flex-wrap sm:justify-between px-8 pt-9 pb-2 flex-col sm:flex-row justify-center items-center sm:items-stretch'>
+					<div className='flex gap-10 flex-wrap sm:justify-between px-5 pt-6 pb-0 flex-col sm:flex-row justify-center items-center sm:items-stretch'>
 						<div>
 							<div>
 								<p>
@@ -121,7 +121,7 @@ const Ecommerce = () => {
 							</div>
 						</div>
 
-						<div className='border-r-1 border-color mb-10 hidden xl:block' />
+						<div className='border-r-1 border-color mb-10 hidden 2xl:block' />
 
 						<div>
 							<StackedChart width='400px' height='150px' />
@@ -148,7 +148,7 @@ const Ecommerce = () => {
 							<SparkLineChart
 								currentColor='blue'
 								id='column-sparkLine'
-								height='100px'
+								height='210px'
 								type='Column'
 								data={sparklineAreaData}
 								width='320'
@@ -157,7 +157,7 @@ const Ecommerce = () => {
 						</div>
 					</div>
 
-					<div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10'>
+					<div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl w-600 xl:w-400 p-8 m-3 flex justify-center items-center gap-10'>
 						<div>
 							<p className='text-2xl font-semibold '>$43,246</p>
 							<p className='text-gray-400'>Yearly sales</p>
