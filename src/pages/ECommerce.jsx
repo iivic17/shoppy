@@ -75,7 +75,7 @@ const Ecommerce = () => {
 						</div>
 					</div>
 
-					<div className='mt-10 flex gap-10 flex-wrap sm:justify-between px-8 pt-9 pb-2 flex-col sm:flex-row justify-center items-center sm:items-stretch'>
+					<div className='flex gap-10 flex-wrap sm:justify-between px-8 pt-9 pb-2 flex-col sm:flex-row justify-center items-center sm:items-stretch'>
 						<div>
 							<div>
 								<p>
@@ -122,7 +122,52 @@ const Ecommerce = () => {
 						<div className='border-r-1 border-color mb-10' />
 
 						<div>
-							<StackedChart width='320px' height='360px' />
+							<StackedChart width='400px' height='150px' />
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div
+						className='rounded-2xl md:w-400 p-4 m-3'
+						style={{ backgroundColor: 'blue' }}>
+						<div className='flex justify-between items-center '>
+							<p className='font-semibold text-white text-2xl'>Earnings</p>
+
+							<div>
+								<p className='text-2xl text-white font-semibold mt-8'>
+									$63,448.78
+								</p>
+								<p className='text-gray-200'>Monthly revenue</p>
+							</div>
+						</div>
+
+						<div className='mt-4'>
+							<SparkLineChart
+								currentColor='blue'
+								id='column-sparkLine'
+								height='100px'
+								type='Column'
+								data={sparklineAreaData}
+								width='320'
+								color='rgb(242, 252, 253)'
+							/>
+						</div>
+					</div>
+
+					<div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10'>
+						<div>
+							<p className='text-2xl font-semibold '>$43,246</p>
+							<p className='text-gray-400'>Yearly sales</p>
+						</div>
+
+						<div className='w-40'>
+							<PieChart
+								id='pie-chart'
+								data={ecomPieChartData}
+								legendVisiblity={false}
+								height='160px'
+							/>
 						</div>
 					</div>
 				</div>
