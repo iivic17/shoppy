@@ -7,9 +7,9 @@ import { earningData, sparklineAreaData, ecomPieChartData } from '../data/dummy'
 
 const Ecommerce = () => {
 	return (
-		<div className='mt-24'>
-			<div className='flex flex:wrap lg:flex-nowrap justify-center'>
-				<div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
+		<div className='mt-24 max-w-7xl mx-auto'>
+			<div className='flex justify-center flex-col xl:flex-row'>
+				<div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl flex-1 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
 					<div className='flex justify-between items-center'>
 						<div>
 							<p className='font-bold text-gray-400'>Earnings</p>
@@ -27,11 +27,11 @@ const Ecommerce = () => {
 					</div>
 				</div>
 
-				<div className='flex m-3 flex-wrap justify-center gap-1 items-center'>
+				<div className='flex m-3 justify-center gap-2 items-center flex-col sm:flex-row'>
 					{earningData.map(item => (
 						<div
 							key={item.title}
-							className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl'>
+							className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg w-full min-w-[12rem] p-4 pt-9 rounded-2xl flex flex-col items-center'>
 							<button
 								type='button'
 								style={{
@@ -56,8 +56,8 @@ const Ecommerce = () => {
 			</div>
 
 			<div className='flex gap-10 flex-wrap justify-center'>
-				<div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780'>
-					<div className='flex justify-between'>
+				<div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl w-full'>
+					<div className='flex justify-between p-5 pt-6'>
 						<p className='font-semibold text-xl'>Revenue Updates</p>
 						<div className='flex items-center gap-4'>
 							<p className='flex items-center gap-2 text-gray-600 hover:drop-shadow-xl'>
@@ -75,8 +75,8 @@ const Ecommerce = () => {
 						</div>
 					</div>
 
-					<div className='mt-10 flex gap-10 flex-wrap justify-center'>
-						<div className='border-r-1 border-color m-4 pr-10'>
+					<div className='mt-10 flex gap-10 flex-wrap sm:justify-between px-8 pt-9 pb-2 flex-col sm:flex-row justify-center items-center sm:items-stretch'>
+						<div>
 							<div>
 								<p>
 									<span className='text-3xl font-semibold'>
@@ -108,6 +108,21 @@ const Ecommerce = () => {
 									color='blue'
 								/>
 							</div>
+
+							<div className='mt-10'>
+								<Button
+									color='white'
+									bgColor='blue'
+									text='Download Report'
+									borderRadius='10px'
+								/>
+							</div>
+						</div>
+
+						<div className='border-r-1 border-color mb-10' />
+
+						<div>
+							<StackedChart width='320px' height='360px' />
 						</div>
 					</div>
 				</div>
