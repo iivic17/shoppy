@@ -80,7 +80,7 @@ const Ecommerce = () => {
 					</div>
 
 					<div className='flex gap-10 flex-wrap sm:justify-between px-5 pt-6 pb-0 flex-col sm:flex-row justify-center items-center sm:items-stretch'>
-						<div>
+						<div className='flex flex-col gap-10'>
 							<div>
 								<p>
 									<span className='text-3xl font-semibold'>
@@ -92,7 +92,7 @@ const Ecommerce = () => {
 								</p>
 								<p className='text-gray-500 mt-1'>Budget</p>
 							</div>
-							<div className='mt-8'>
+							<div>
 								<p>
 									<span className='text-3xl font-semibold'>
 										$48,192
@@ -101,7 +101,7 @@ const Ecommerce = () => {
 								<p className='text-gray-500 mt-1'>Expense</p>
 							</div>
 
-							<div className='mt-5'>
+							<div className='mt-6'>
 								<SparkLineChart
 									currentColor='blue'
 									id='line-sparkline'
@@ -113,7 +113,7 @@ const Ecommerce = () => {
 								/>
 							</div>
 
-							<div className='mt-10'>
+							<div className='mt-auto mb-6'>
 								<Button
 									color='white'
 									bgColor='blue'
