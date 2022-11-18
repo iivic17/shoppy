@@ -7,7 +7,7 @@ import { earningData, sparklineAreaData, ecomPieChartData } from '../data/dummy'
 
 const Ecommerce = () => {
 	return (
-		<div className='mt-24 max-w-7xl mx-auto'>
+		<div className='my-10 max-w-7xl mx-auto'>
 			<div id='first-row' className='flex justify-center flex-col xl:flex-row'>
 				<div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl flex-1 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
 					<div className='flex justify-between items-center'>
