@@ -19,7 +19,7 @@ import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy';
 const Orders = () => {
 	return (
 		<div>
-			<Header title='Orders' />
+			<Header title='Orders' category='Page' />
 		</div>
 	);
 };
