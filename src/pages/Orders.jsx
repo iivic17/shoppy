@@ -12,14 +12,13 @@ import {
 	Edit,
 	Inject,
 } from '@syncfusion/ej2-react-grids';
-import { Header } from '../components';
+import PageTemplate from './PageTemplate';
 
 import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy';
 
 const Orders = () => {
 	return (
-		<div className='my-10 mx-3 sm:mx-10 p-5 sm:p-10 pt-10 bg-white rounded-3xl'>
-			<Header title='Orders' category='Page' />
+		<PageTemplate category='Page' title='Orders'>
 			<GridComponent
 				id='gridcomp'
 				dataSource={ordersData}
@@ -46,7 +45,7 @@ const Orders = () => {
 					]}
 				/>
 			</GridComponent>
-		</div>
+		</PageTemplate>
 	);
 };
 

@@ -8,14 +8,13 @@ import {
 	Search,
 	Toolbar,
 } from '@syncfusion/ej2-react-grids';
-import { Header } from '../components';
+import PageTemplate from './PageTemplate';
 
 import { employeesData, employeesGrid } from '../data/dummy';
 
 const Employees = () => {
 	return (
-		<div className='my-10 mx-3 sm:mx-10 p-5 sm:p-10 pt-10 bg-white rounded-3xl'>
-			<Header title='Employees' category='Page' />
+		<PageTemplate category='Page' title='Ecommerce'>
 			<GridComponent
 				dataSource={employeesData}
 				allowPaging
@@ -31,7 +30,7 @@ const Employees = () => {
 				</ColumnsDirective>
 				<Inject services={[Page, Edit, Search, Toolbar]} />
 			</GridComponent>
-		</div>
+		</PageTemplate>
 	);
 };
 
