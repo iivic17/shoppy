@@ -1,11 +1,14 @@
 import { SparkLineChart } from '../../components';
+import { useStateContext } from '../../contexts/ContextProvider';
 import { sparklineAreaData } from '../../data/dummy';
 
 const EarningsGraph = () => {
+	const { currentColor } = useStateContext();
+
 	return (
 		<div
 			className='rounded-2xl w-600 xl:w-400 p-4'
-			style={{ backgroundColor: 'blue' }}>
+			style={{ backgroundColor: currentColor }}>
 			<div className='flex justify-between items-center '>
 				<p className='font-semibold text-white text-2xl'>Earnings</p>
 
@@ -17,7 +20,7 @@ const EarningsGraph = () => {
 
 			<div className='mt-4 flex items-center justify-center'>
 				<SparkLineChart
-					currentColor='blue'
+					currentColor={currentColor}
 					id='column-sparkLine'
 					height='210px'
 					type='Column'

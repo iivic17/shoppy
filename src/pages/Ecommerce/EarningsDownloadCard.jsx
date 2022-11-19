@@ -1,6 +1,9 @@
 import { Button } from '../../components';
+import { useStateContext } from '../../contexts/ContextProvider';
 
 const EarningsDownloadCard = () => {
+	const { currentColor } = useStateContext();
+
 	return (
 		<div
 			id='earnings-download-card'
@@ -14,7 +17,7 @@ const EarningsDownloadCard = () => {
 			<div className='mt-6'>
 				<Button
 					color='white'
-					bgColor='blue'
+					bgColor={currentColor}
 					text='Download'
 					borderRadius='10px'
 					size='md'

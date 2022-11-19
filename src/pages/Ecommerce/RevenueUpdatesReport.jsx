@@ -1,8 +1,11 @@
 import { Button, SparkLineChart } from '../../components';
+import { useStateContext } from '../../contexts/ContextProvider';
 
 import { sparklineAreaData } from '../../data/dummy';
 
 const RevenueUpdatesReport = () => {
+	const { currentColor } = useStateContext();
+
 	return (
 		<div className='flex flex-col gap-10 mt-6'>
 			<div>
@@ -23,20 +26,20 @@ const RevenueUpdatesReport = () => {
 
 			<div className='mt-3'>
 				<SparkLineChart
-					currentColor='blue'
+					currentColor={currentColor}
 					id='line-sparkline'
 					type='Line'
 					height='80px'
 					width='250px'
 					data={sparklineAreaData}
-					color='blue'
+					color={currentColor}
 				/>
 			</div>
 
 			<div className='mt-0'>
 				<Button
 					color='white'
-					bgColor='blue'
+					bgColor={currentColor}
 					text='Download Report'
 					borderRadius='10px'
 				/>
