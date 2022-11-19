@@ -9,10 +9,17 @@ import {
 } from '@syncfusion/ej2-react-richtexteditor';
 import PageTemplate from './PageTemplate';
 
-import { editorData } from '../data/dummy';
+import { EditorData } from '../data/dummy';
 
 const Editor = () => {
-	return <PageTemplate category='App' title='Editor'></PageTemplate>;
+	return (
+		<PageTemplate category='App' title='Editor'>
+			<RichTextEditorComponent>
+				<EditorData />
+				<Inject services={[HtmlEditor, Toolbar, Image, Link, QuickToolbar]} />
+			</RichTextEditorComponent>
+		</PageTemplate>
+	);
 };
 
 export default Editor;
