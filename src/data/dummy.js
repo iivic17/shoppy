@@ -95,7 +95,7 @@ const gridEmployeeCountry = props => (
 		<span>{props.Country}</span>
 	</div>
 );
-export const EditorData = () => (
+export const editorData = () => (
 	<div>
 		<h3>
 			Try React React has been designed from the start for gradual adoption, and you

@@ -10,7 +10,7 @@ const FeatureBoxCard = ({
 	return (
 		<div
 			id={`feature-box-card-${title}`}
-			className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg w-full min-w-[12rem] p-4 pt-9 rounded-2xl flex flex-col items-center'>
+			className='flex-1 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg w-full min-w-[12rem] p-4 pt-9 rounded-2xl flex flex-col items-center'>
 			<button
 				type='button'
 				style={{
