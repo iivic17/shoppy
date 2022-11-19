@@ -44,6 +44,7 @@ const LineChart = () => {
 				background: color,
 			}}
 			tooltip={{
+				fontFamily: 'Open Sans, sans-serif',
 				enable: true,
 			}}>
 			<Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
