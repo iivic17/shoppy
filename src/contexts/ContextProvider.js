@@ -13,6 +13,21 @@ export const ContextProvider = ({ children }) => {
 	const [activeMenu, setActiveMenu] = useState(true);
 	const [isClicked, setIsClicked] = useState(initialState);
 	const [screenSize, setScreenSize] = useState(null);
+	const [currentColor, setCurrentColor] = useState('#03C9D7');
+	const [currentMode, setCurrentMode] = useState('light');
+	const [themeSettings, setThemeSettings] = useState(false);
+
+	const setMode = event => {
+		setCurrentMode(event.target.value);
+
+		localStorage.setItem('[shoppy]:theme-mode', event.target.value);
+	};
+
+	const setColor = value => {
+		setCurrentColor(value);
+
+		localStorage.setItem('[shoppy]:color-mode', value);
+	};
 
 	const handleClick = clicked => {
 		setIsClicked({
@@ -30,6 +45,12 @@ export const ContextProvider = ({ children }) => {
 				handleClick,
 				screenSize,
 				setScreenSize,
+				currentColor,
+				currentMode,
+				setMode,
+				setColor,
+				themeSettings,
+				setThemeSettings,
 			}}>
 			{children}
 		</StateContext.Provider>

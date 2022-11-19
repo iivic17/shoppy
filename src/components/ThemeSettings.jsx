@@ -6,14 +6,17 @@ import { useStateContext } from '../contexts/ContextProvider';
 import { themeColors } from '../data/dummy';
 
 const ThemeSettings = () => {
+	const { setColor, setMode, currentMode, currentColor, setThemeSettings } =
+		useStateContext();
+
 	return (
-		<div className='bg-half-transparent w-screen fixed nav-item top-0 right-0'>
+		<div className='bg-half-transparent w-screen fixed nav-item top-0 right-0 z-[9999999]'>
 			<div className='float-right h-screen dark:text-gray-200 bg-white dark:bg-[#484B52] w-400'>
 				<div className='flex justify-between items-center p-4 ml-4'>
 					<p className='font-semibold text-lg'>Settings</p>
 					<button
 						type='button'
-						onClick={() => {}}
+						onClick={() => setThemeSettings(false)}
 						style={{ color: 'rgb(153, 171, 180)' }}
 						className='rounded-full text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray flex items-center justify-center'>
 						<MdOutlineCancel />
@@ -28,10 +31,10 @@ const ThemeSettings = () => {
 							type='radio'
 							id='light'
 							name='theme'
-							value='Light'
+							value='light'
 							className='cursor-pointer'
-							onChange={() => {}}
-							checked={true}
+							onChange={setMode}
+							checked={currentMode === 'light'}
 						/>
 						<label htmlFor='light' className='ml-2 text-md cursor-pointer'>
 							Light
@@ -43,10 +46,10 @@ const ThemeSettings = () => {
 							type='radio'
 							id='dark'
 							name='theme'
-							value='Dark'
+							value='dark'
 							className='cursor-pointer'
-							onChange={() => {}}
-							checked={true}
+							onChange={setMode}
+							checked={currentMode === 'dark'}
 						/>
 						<label htmlFor='dark' className='ml-2 text-md cursor-pointer'>
 							Dark
@@ -61,19 +64,21 @@ const ThemeSettings = () => {
 						{themeColors.map(color => (
 							<TooltipComponent
 								key={color.name}
-								content={color.name}
+								content={color.tooltip}
 								position='TopCenter'>
 								<div className='relative mt-2 cursor-pointer flex gap-5 items-center justify-center'>
 									<button
 										type='button'
-										onClick={() => {}}
+										onClick={() => setColor(color.color)}
 										className='h-10 w-10 rounded-full cursor-pointer'
 										style={{
 											backgroundColor: color.color,
 										}}>
 										<BsCheck
 											className={`ml-2 text-2xl text-white ${
-												true ? 'block' : 'hidden'
+												color.color === currentColor
+													? 'block'
+													: 'hidden'
 											}`}
 										/>
 									</button>

@@ -828,26 +828,32 @@ export const themeColors = [
 	{
 		name: 'blue-theme',
 		color: '#1A97F5',
+		tooltip: 'Blue Theme',
 	},
 	{
 		name: 'green-theme',
 		color: '#03C9D7',
+		tooltip: 'Green Theme',
 	},
 	{
 		name: 'purple-theme',
 		color: '#7352FF',
+		tooltip: 'Purple Theme',
 	},
 	{
 		name: 'red-theme',
 		color: '#FF5C8E',
+		tooltip: 'Red Theme',
 	},
 	{
 		name: 'indigo-theme',
 		color: '#1E4DB7',
+		tooltip: 'Indigo Theme',
 	},
 	{
 		color: '#FB9678',
 		name: 'orange-theme',
+		tooltip: 'Orange Theme',
 	},
 ];
 
