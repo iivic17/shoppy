@@ -8,14 +8,20 @@ import {
 	Inject,
 	AccumulationTooltip,
 } from '@syncfusion/ej2-react-charts';
+import { useStateContext } from '../../contexts/ContextProvider';
 
 const PieChart = ({ id, data, legendVisiblity, height }) => {
+	const { currentMode } = useStateContext();
+
+	const color =
+		currentMode === 'light' ? 'white' : 'rgb(51 55 62 / var(--tw-bg-opacity)';
+
 	return (
 		<AccumulationChartComponent
 			id={id}
 			legendSettings={{ visible: legendVisiblity, background: 'white' }}
 			height={height}
-			background='#fff'
+			background={color}
 			tooltip={{ enable: true }}>
 			<Inject
 				services={[

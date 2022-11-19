@@ -26,11 +26,11 @@ import { useStateContext } from './contexts/ContextProvider';
 import './App.css';
 
 const App = () => {
-	const { activeMenu, themeSettings, setThemeSettings, currentColor } =
+	const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } =
 		useStateContext();
 
 	return (
-		<div>
+		<div className={currentMode === 'dark' ? 'dark' : ''}>
 			<BrowserRouter>
 				<div className='flex relative dark:bg-main-dark-bg'>
 					<div className='fixed right-5 bottom-5 z-[1000]'>
@@ -57,8 +57,8 @@ const App = () => {
 					<div
 						className={
 							activeMenu
-								? 'dark:bg-main-bg bg-main-bg min-h-screen md:ml-72 w-full'
-								: 'dark:bg-main-bg bg-main-bg min-h-screen flex-2 w-full'
+								? 'dark:bg-main-dark-bg bg-main-bg min-h-screen md:ml-72 w-full'
+								: 'dark:bg-main-dark-bg bg-main-bg min-h-screen flex-2 w-full'
 						}>
 						<div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
 							<Navbar />
