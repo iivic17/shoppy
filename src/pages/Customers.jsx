@@ -17,21 +17,26 @@ import { customersData, customersGrid } from '../data/dummy';
 const Customers = () => {
 	return (
 		<PageTemplate category='Page' title='Customers'>
-			{/* <GridComponent
-				dataSource={employeesData}
+			<GridComponent
+				dataSource={customersData}
 				allowPaging
+				allowSorting
 				pageSettings={{
 					pageSize: 20,
 				}}
-				toolbar={['Search']}
+				toolbar={['Delete']}
+				editSettings={{
+					allowDeleting: true,
+					allowEditing: true,
+				}}
 				width='auto'>
 				<ColumnsDirective>
-					{employeesGrid.map(item => (
+					{customersGrid.map(item => (
 						<ColumnDirective key={item.headerText} {...item} />
 					))}
 				</ColumnsDirective>
-				<Inject services={[Page, Edit, Search, Toolbar]} />
-			</GridComponent> */}
+				<Inject services={[Page, Toolbar, Selection, Edit, Sort, Filter]} />
+			</GridComponent>
 		</PageTemplate>
 	);
 };
