@@ -16,7 +16,7 @@ import {
 	BarChart,
 	ColorMappingChart,
 	FinancialChart,
-	LineChart,
+	Line,
 	PieChart,
 	PyramidChart,
 	StackedChart,
@@ -80,7 +80,7 @@ const App = () => {
 								<Route path='/calendar' element={<Calendar />} />
 								<Route path='/color-picker' element={<ColorPicker />} />
 
-								<Route path='/line' element={<LineChart />} />
+								<Route path='/line' element={<Line />} />
 								<Route path='/area' element={<AreaChart />} />
 								<Route path='/bar' element={<BarChart />} />
 								<Route path='/pie' element={<PieChart />} />
