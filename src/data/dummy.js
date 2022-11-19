@@ -393,18 +393,20 @@ export const LinePrimaryYAxis = {
 };
 
 export const customersGrid = [
-	{ type: 'checkbox', width: '50' },
+	{ type: 'checkbox', width: '50', key: 0 },
 	{
 		headerText: 'Name',
 		width: '150',
 		template: customerGridImage,
 		textAlign: 'Center',
+		key: 1,
 	},
 	{
 		field: 'ProjectName',
 		headerText: 'Project Name',
 		width: '150',
 		textAlign: 'Center',
+		key: 2,
 	},
 	{
 		field: 'Status',
@@ -413,6 +415,7 @@ export const customersGrid = [
 		format: 'yMd',
 		textAlign: 'Center',
 		template: customerGridStatus,
+		key: 3,
 	},
 	{
 		field: 'Weeks',
@@ -420,6 +423,7 @@ export const customersGrid = [
 		width: '100',
 		format: 'C2',
 		textAlign: 'Center',
+		key: 4,
 	},
 	{
 		field: 'Budget',
@@ -427,9 +431,16 @@ export const customersGrid = [
 		width: '100',
 		format: 'yMd',
 		textAlign: 'Center',
+		key: 5,
 	},
 
-	{ field: 'Location', headerText: 'Location', width: '150', textAlign: 'Center' },
+	{
+		field: 'Location',
+		headerText: 'Location',
+		width: '150',
+		textAlign: 'Center',
+		key: 6,
+	},
 
 	{
 		field: 'CustomerID',
@@ -437,6 +448,7 @@ export const customersGrid = [
 		width: '120',
 		textAlign: 'Center',
 		isPrimaryKey: true,
+		key: 7,
 	},
 ];
 
@@ -862,6 +874,7 @@ export const ordersGrid = [
 		template: gridOrderImage,
 		textAlign: 'Center',
 		width: '120',
+		key: 1,
 	},
 	{
 		field: 'OrderItems',
@@ -869,12 +882,14 @@ export const ordersGrid = [
 		width: '150',
 		editType: 'dropdownedit',
 		textAlign: 'Center',
+		key: 2,
 	},
 	{
 		field: 'CustomerName',
 		headerText: 'Customer Name',
 		width: '150',
 		textAlign: 'Center',
+		key: 3,
 	},
 	{
 		field: 'TotalAmount',
@@ -883,6 +898,7 @@ export const ordersGrid = [
 		textAlign: 'Center',
 		editType: 'numericedit',
 		width: '150',
+		key: 4,
 	},
 	{
 		headerText: 'Status',
@@ -890,12 +906,14 @@ export const ordersGrid = [
 		field: 'OrderItems',
 		textAlign: 'Center',
 		width: '120',
+		key: 5,
 	},
 	{
 		field: 'OrderID',
 		headerText: 'Order ID',
 		width: '120',
 		textAlign: 'Center',
+		key: 6,
 	},
 
 	{
@@ -903,6 +921,7 @@ export const ordersGrid = [
 		headerText: 'Location',
 		width: '150',
 		textAlign: 'Center',
+		key: 7,
 	},
 ];
 

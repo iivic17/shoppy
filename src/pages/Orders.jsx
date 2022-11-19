@@ -14,7 +14,7 @@ import {
 } from '@syncfusion/ej2-react-grids';
 import PageTemplate from './PageTemplate';
 
-import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy';
+import { ordersData, ordersGrid } from '../data/dummy';
 
 const Orders = () => {
 	return (
@@ -29,7 +29,7 @@ const Orders = () => {
 				allowResizing>
 				<ColumnsDirective>
 					{ordersGrid.map(item => (
-						<ColumnDirective key={item.field} {...item} />
+						<ColumnDirective {...item} />
 					))}
 				</ColumnsDirective>
 				<Inject
