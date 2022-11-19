@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import {
 	ChartComponent,
 	SeriesCollectionDirective,
@@ -15,6 +16,10 @@ import {
 } from '../../data/dummy';
 
 const StackedChart = ({ width, heigth }) => {
+	useEffect(() => {
+		document.querySelector('#stack-chart').style.overflow = 'scroll';
+	}, []);
+
 	return (
 		<ChartComponent
 			width={width}
