@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { useStateContext } from './contexts/ContextProvider';
 import {
 	Ecommerce,
@@ -23,11 +23,14 @@ import {
 const Router = () => {
 	const { activeMenu, setActiveMenu } = useStateContext();
 	const location = useLocation();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		if (activeMenu) {
 			setActiveMenu(false);
 		}
+
+		if (location?.pathname === '/') navigate('/ecommerce');
 	}, [location]);
 
 	return (
