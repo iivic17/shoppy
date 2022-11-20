@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 
 const StateContext = createContext();
 
@@ -35,6 +35,14 @@ export const ContextProvider = ({ children }) => {
 			[clicked]: true,
 		});
 	};
+
+	useEffect(() => {
+		const mode = localStorage.getItem('[shoppy]:theme-mode');
+		const color = localStorage.getItem('[shoppy]:color-mode');
+
+		if (mode) setCurrentMode(mode);
+		if (color) setCurrentColor(color);
+	}, []);
 
 	return (
 		<StateContext.Provider
