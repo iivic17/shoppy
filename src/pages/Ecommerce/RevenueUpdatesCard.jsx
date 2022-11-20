@@ -11,7 +11,7 @@ const RevenueUpdatesCard = () => {
 			<div className='flex gap-10 sm:gap-6 sm:justify-between px-5 pt-6 pb-0 flex-col sm:flex-row justify-center sm:items-stretch'>
 				<RevenueUpdatesReport />
 
-				<StackedChart width='300px' height='150px' />
+				<StackedChart width='400px' height='150px' />
 			</div>
 		</div>
 	);
