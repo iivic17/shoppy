@@ -31,11 +31,24 @@ export const ContextProvider = ({ children }) => {
 	};
 
 	const handleClick = clicked => {
+		if (isClicked[clicked] === true) {
+			setIsClicked({
+				...initialState,
+				[clicked]: false,
+			});
+
+			return;
+		}
+
 		setIsClicked({
 			...initialState,
 			[clicked]: true,
 		});
 	};
+
+	useEffect(() => {
+		setIsClicked(initialState);
+	}, [activeMenu]);
 
 	useEffect(() => {
 		const mode = localStorage.getItem('[shoppy]:theme-mode');
