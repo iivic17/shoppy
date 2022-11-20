@@ -30,7 +30,7 @@ const Router = () => {
 			setActiveMenu(false);
 		}
 
-		if (location?.pathname !== '/ecommerce') navigate('/ecommerce');
+		if (location?.pathname === '/') navigate('/ecommerce');
 	}, [location]);
 
 	return (

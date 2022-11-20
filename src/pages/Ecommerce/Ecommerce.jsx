@@ -15,8 +15,8 @@ const Ecommerce = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		if (location?.pathname === '/') navigate('/ecommerce');
-	}, [location]);
+		if (location?.pathname !== '/ecommerce') navigate('/ecommerce');
+	}, []);
 
 	return (
 		<div id='page-ecommerce'>
