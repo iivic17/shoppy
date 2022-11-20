@@ -49,7 +49,7 @@ const App = () => {
 							<Navbar />
 						</div>
 
-						<div className='xl:max-w-7xl mx-auto'>
+						<div className='xl:max-w-7xl mx-auto my-[5rem] sm:my-[7rem] md:my-10 px-6 sm:px-8'>
 							{themeSettings && <ThemeSettings />}
 
 							<Router />
