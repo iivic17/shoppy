@@ -31,7 +31,7 @@ const Bar = () => {
 			<div className='w-full'>
 				<ChartComponent
 					id='bar-page-chart'
-					height='900px'
+					height='500px'
 					primaryXAxis={barPrimaryXAxis}
 					primaryYAxis={barPrimaryYAxis}
 					fontFamily='Open Sans, sans-serif'

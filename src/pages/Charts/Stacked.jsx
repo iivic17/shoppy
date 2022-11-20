@@ -31,7 +31,7 @@ const Stacked = () => {
 			<div className='w-full'>
 				<ChartComponent
 					id='stacked-page-chart'
-					height='900px'
+					height='500px'
 					primaryXAxis={stackedPrimaryXAxis}
 					primaryYAxis={stackedPrimaryYAxis}
 					fontFamily='Open Sans, sans-serif'

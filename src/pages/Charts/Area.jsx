@@ -29,7 +29,7 @@ const Area = () => {
 			<div className='w-full'>
 				<ChartComponent
 					id='line-chart'
-					height='900px'
+					height='500px'
 					primaryXAxis={areaPrimaryXAxis}
 					primaryYAxis={areaPrimaryYAxis}
 					fontFamily='Open Sans, sans-serif'

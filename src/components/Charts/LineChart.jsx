@@ -24,7 +24,7 @@ const LineChart = () => {
 	return (
 		<ChartComponent
 			id='line-chart'
-			height='900px'
+			height='500px'
 			primaryXAxis={LinePrimaryXAxis}
 			primaryYAxis={LinePrimaryYAxis}
 			fontFamily='Open Sans, sans-serif'

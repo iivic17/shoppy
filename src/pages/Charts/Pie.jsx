@@ -27,7 +27,7 @@ const Pie = () => {
 			<div className='w-full'>
 				<AccumulationChartComponent
 					id='pie-page-chart'
-					height='900px'
+					height='500px'
 					fontFamily='Open Sans, sans-serif'
 					legendSettings={{
 						textStyle: {

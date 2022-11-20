@@ -37,7 +37,7 @@ const ColorMapping = () => {
 			<div className='w-full'>
 				<ChartComponent
 					id='color-mapping-page-chart'
-					height='900px'
+					height='500px'
 					primaryXAxis={ColorMappingPrimaryXAxis}
 					primaryYAxis={ColorMappingPrimaryYAxis}
 					fontFamily='Open Sans, sans-serif'

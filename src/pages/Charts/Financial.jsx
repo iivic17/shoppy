@@ -33,7 +33,7 @@ const Financial = () => {
 			<div className='w-full'>
 				<ChartComponent
 					id='financial-page-chart'
-					height='900px'
+					height='500px'
 					primaryXAxis={FinancialPrimaryXAxis}
 					primaryYAxis={FinancialPrimaryYAxis}
 					fontFamily='Open Sans, sans-serif'

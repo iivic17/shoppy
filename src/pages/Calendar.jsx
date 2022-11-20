@@ -18,7 +18,7 @@ const Calendar = () => {
 		<PageTemplate category='App' title='Calendar'>
 			<div className='min-w-[800px]'>
 				<ScheduleComponent
-					height='900px'
+					height='500px'
 					eventSettings={{
 						dataSource: scheduleData,
 					}}

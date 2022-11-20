@@ -31,7 +31,7 @@ const Pyramid = () => {
 			<div className='w-full'>
 				<AccumulationChartComponent
 					id='pyramid-page-chart'
-					height='900px'
+					height='500px'
 					fontFamily='Open Sans, sans-serif'
 					legendSettings={{
 						textStyle: {
