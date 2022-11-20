@@ -48,7 +48,7 @@ export const ContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		setIsClicked(initialState);
-	}, [activeMenu]);
+	}, [activeMenu, themeSettings]);
 
 	useEffect(() => {
 		const mode = localStorage.getItem('[shoppy]:theme-mode');
