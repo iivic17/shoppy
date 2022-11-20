@@ -1,3 +1,4 @@
+import DailyActivitiesCard from './DailyActivitiesCard';
 import EarningsCard from './EarningsCard';
 import EarningsDownloadCard from './EarningsDownloadCard';
 import FeatureBoxGroup from './FeatureBoxGroup';
@@ -36,6 +37,7 @@ const Ecommerce = () => {
 				className='mt-5 w-full flex justify-center flex-col xl:flex-row items-stretch gap-6 sm:gap-3'>
 				<WeeklyStatsCard />
 				<MedicalProBrandingCard />
+				<DailyActivitiesCard />
 			</div>
 		</div>
 	);

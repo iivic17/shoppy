@@ -8,7 +8,7 @@ const MedicalProBrandingCard = () => {
 	const { currentColor } = useStateContext();
 
 	return (
-		<div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 pb-6 lg:pb-9 flex-1 flex flex-col'>
+		<div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 pb-6 lg:pb-9 flex-1 flex flex-col gap-3'>
 			<div className='flex justify-between'>
 				<p className='text-xl font-semibold'>MedicalPro Branding</p>
 				<button type='button' className='text-xl font-semibold text-gray-400'>
