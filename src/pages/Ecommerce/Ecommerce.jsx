@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import DailyActivitiesCard from './DailyActivitiesCard';
 import EarningsCard from './EarningsCard';
 import EarningsDownloadCard from './EarningsDownloadCard';
@@ -7,8 +8,16 @@ import RecentTransactionsCard from './RecentTransactionsCard';
 import RevenueUpdatesCard from './RevenueUpdatesCard';
 import SalesOverviewCard from './SalesOverviewCard';
 import WeeklyStatsCard from './WeeklyStatsCard';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Ecommerce = () => {
+	const location = useLocation();
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (location?.pathname === '/') navigate('/ecommerce');
+	}, [location]);
+
 	return (
 		<div id='page-ecommerce'>
 			<div

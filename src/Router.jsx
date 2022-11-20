@@ -30,12 +30,12 @@ const Router = () => {
 			setActiveMenu(false);
 		}
 
-		if (location?.pathname === '/') navigate('/ecommerce');
+		if (location?.pathname !== '/ecommerce') navigate('/ecommerce');
 	}, [location]);
 
 	return (
 		<Routes>
-			<Route path='/' element={<Ecommerce />} />
+			<Route path='/' exact element={<Ecommerce />} />
 			<Route path='/ecommerce' element={<Ecommerce />} />
 
 			<Route path='/orders' element={<Orders />} />
@@ -55,6 +55,7 @@ const Router = () => {
 			<Route path='/color-mapping' element={<ColorMapping />} />
 			<Route path='/pyramid' element={<Pyramid />} />
 			<Route path='/stacked' element={<Stacked />} />
+			<Route path='*' element={<Ecommerce />} />
 		</Routes>
 	);
 };
