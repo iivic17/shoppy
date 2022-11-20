@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const StateContext = createContext();
 
@@ -10,7 +11,7 @@ const initialState = {
 };
 
 export const ContextProvider = ({ children }) => {
-	const [activeMenu, setActiveMenu] = useState(true);
+	const [activeMenu, setActiveMenu] = useState(false);
 	const [isClicked, setIsClicked] = useState(initialState);
 	const [screenSize, setScreenSize] = useState(null);
 	const [currentColor, setCurrentColor] = useState('#03C9D7');
