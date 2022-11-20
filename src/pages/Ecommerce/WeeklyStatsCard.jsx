@@ -8,7 +8,7 @@ const WeeklyStatsCard = () => {
 	const { currentColor } = useStateContext();
 
 	return (
-		<div className='md:w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 pb-8 m-3 flex-1'>
+		<div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 pb-8 flex-1'>
 			<div className='flex justify-between'>
 				<p className='text-xl font-semibold'>Weekly Stats</p>
 				<button type='button' className='text-xl font-semibold text-gray-500'>

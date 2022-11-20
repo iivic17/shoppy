@@ -1,6 +1,7 @@
 import EarningsCard from './EarningsCard';
 import EarningsDownloadCard from './EarningsDownloadCard';
 import FeatureBoxGroup from './FeatureBoxGroup';
+import MedicalProBrandingCard from './MedicalProBrandingCard';
 import RecentTransactionsCard from './RecentTransactionsCard';
 import RevenueUpdatesCard from './RevenueUpdatesCard';
 import SalesOverviewCard from './SalesOverviewCard';
@@ -34,6 +35,7 @@ const Ecommerce = () => {
 				id='ecommerce-fourth-row'
 				className='mt-5 w-full flex justify-center flex-col xl:flex-row items-stretch gap-6 sm:gap-3'>
 				<WeeklyStatsCard />
+				<MedicalProBrandingCard />
 			</div>
 		</div>
 	);
