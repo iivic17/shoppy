@@ -4,7 +4,7 @@ const PageTemplate = ({ title, category, chartHeader, children }) => {
 	return (
 		<div
 			id={`template-${title}`}
-			className={`my-10 mx-3 sm:mx-10 p-5 sm:p-10 pt-10 bg-white rounded-3xl overflow-auto ${
+			className={`my-[3rem] sm:my-[6rem] md:my-10 mx-3 sm:mx-10 p-5 sm:p-10 pt-10 bg-white rounded-3xl overflow-auto ${
 				category === 'Chart' ? 'dark:bg-secondary-dark-bg' : ''
 			}`}>
 			<Header title={title} category={category} />
