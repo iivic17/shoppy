@@ -29,7 +29,10 @@ const Sidebar = () => {
 							onClick={handleCloseSidebar}
 							className='items-center gap-3 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900'>
 							<SiShopware />
-							<span>Shoppy</span>
+							<span
+								className={`relative after:absolute after:w-full after:bottom-0 after:left-0 after:h-1 after:bg-[${currentColor}] rounded-sm`}>
+								Shoppy
+							</span>
 						</Link>
 						<TooltipComponent content='Menu' position='BottomCenter'>
 							<button
