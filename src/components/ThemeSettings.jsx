@@ -11,8 +11,8 @@ const ThemeSettings = () => {
 
 	return (
 		<div className='bg-half-transparent w-screen fixed nav-item top-0 right-0 z-[9999999]'>
-			<div className='float-right h-screen dark:text-gray-200 bg-white dark:bg-[#484B52] w-400'>
-				<div className='flex justify-between items-center p-4 ml-4'>
+			<div className='float-right h-screen dark:text-gray-200 bg-white dark:bg-[#484B52] w-full md:w-400 p-8'>
+				<div className='flex justify-between items-center'>
 					<p className='font-semibold text-lg'>Settings</p>
 					<button
 						type='button'
@@ -23,8 +23,8 @@ const ThemeSettings = () => {
 					</button>
 				</div>
 
-				<div className='flex flex-col border-t-1 border-color p-4 ml-4'>
-					<p className='font-semibold text-xl'>Theme Options</p>
+				<div className='flex flex-col border-t-1 border-color mt-6'>
+					<p className='font-semibold text-xl mt-6'>Theme Options</p>
 
 					<div className='mt-4 flex justify-start items-center'>
 						<input
@@ -57,8 +57,8 @@ const ThemeSettings = () => {
 					</div>
 				</div>
 
-				<div className='flex flex-col border-t-1 border-color p-4 ml-4'>
-					<p className='font-semibold text-xl'>Theme Colors</p>
+				<div className='flex flex-col border-t-1 border-color mt-6'>
+					<p className='font-semibold text-xl mt-6'>Theme Colors</p>
 
 					<div className='flex gap-3 justify-start items-center'>
 						{themeColors.map(color => (
