@@ -54,6 +54,8 @@ const App = () => {
 
 							<Router />
 						</div>
+
+						<Footer />
 					</div>
 				</div>
 			</BrowserRouter>
