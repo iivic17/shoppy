@@ -1,22 +1,8 @@
 import { Button } from '../../components';
+import DropDown from '../../components/DropDown';
 import { useStateContext } from '../../contexts/ContextProvider';
-import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
 import { recentTransactions, dropdownData } from '../../data/dummy';
-
-const DropDown = ({ currentMode }) => (
-	<div className='w-28 px-2 py-1 rounded-md absolute top-5 sm:top-[-4px] left-[-7px] sm:left-auto sm:right-0'>
-		<DropDownListComponent
-			id='time'
-			fields={{ text: 'Time', value: 'Id' }}
-			style={{ color: currentMode === 'dark' && 'white', border: 'none' }}
-			value='1'
-			dataSource={dropdownData}
-			popupHeight='220px'
-			popupWidth='120px'
-		/>
-	</div>
-);
 
 const RecentTransactionsCard = () => {
 	const { currentMode, currentColor } = useStateContext();
@@ -25,7 +11,7 @@ const RecentTransactionsCard = () => {
 		<div className='flex-1 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl'>
 			<div className='flex justify-between items-center gap-2 relative'>
 				<p className='text-xl font-semibold'>Recent Transactions</p>
-				<DropDown currentMode={currentMode} />
+				<DropDown currentMode={currentMode} data={dropdownData} />
 			</div>
 			<div className='mt-10 flex flex-col w-full'>
 				{recentTransactions.map(item => (
