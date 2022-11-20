@@ -8,7 +8,7 @@ const RecentTransactionsCard = () => {
 	const { currentMode, currentColor } = useStateContext();
 
 	return (
-		<div className='flex-1 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl'>
+		<div className='flex-1 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 pb-6 lg:pb-12 rounded-2xl flex flex-col'>
 			<div className='flex justify-between items-center gap-2 relative'>
 				<p className='text-xl font-semibold'>Recent Transactions</p>
 				<DropDown currentMode={currentMode} data={dropdownData} />
@@ -35,7 +35,7 @@ const RecentTransactionsCard = () => {
 					</div>
 				))}
 			</div>
-			<div className='flex justify-between items-center mt-5 border-t-1 border-color'>
+			<div className='flex justify-between items-center mt-6 lg:mt-auto border-t-1 border-color'>
 				<div className='mt-3'>
 					<Button
 						color='white'

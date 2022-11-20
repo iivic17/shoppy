@@ -32,7 +32,7 @@ const LineChart = () => {
 				textStyle: {
 					color: colorReversed,
 					fontFamily: 'Open Sans, sans-serif',
-					size: '20px',
+					size: '14px',
 				},
 				background: color,
 			}}

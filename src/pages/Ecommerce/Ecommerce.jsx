@@ -3,6 +3,7 @@ import EarningsDownloadCard from './EarningsDownloadCard';
 import FeatureBoxGroup from './FeatureBoxGroup';
 import RecentTransactionsCard from './RecentTransactionsCard';
 import RevenueUpdatesCard from './RevenueUpdatesCard';
+import SalesOverviewCard from './SalesOverviewCard';
 
 const Ecommerce = () => {
 	return (
@@ -25,6 +26,7 @@ const Ecommerce = () => {
 				id='ecommerce-third-row'
 				className='mt-5 w-full flex justify-center flex-col xl:flex-row items-stretch gap-6 sm:gap-3'>
 				<RecentTransactionsCard />
+				<SalesOverviewCard />
 			</div>
 		</div>
 	);
